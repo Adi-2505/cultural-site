@@ -3,8 +3,6 @@ module.exports = (app) => {
   const attendees = require("../controllers/attendee.controller.js");
   // creating a router to handle all the routes.
   var router = require("express").Router();
-
-
   
   // For Validation of Input
   const {check,validationResult}=require("express-validator");
