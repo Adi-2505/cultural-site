@@ -1,6 +1,6 @@
 import './App.css';
-import Navbar from "./pages/Navbar"
-import Footer from "./pages/Footer"
+import Navbar from "./pages/navbar"
+import Footer from "./pages/footer"
 function App() {
   return (
     <div className="App">
