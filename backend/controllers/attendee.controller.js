@@ -109,6 +109,8 @@ exports.findAll = (req, res) => {
 
 // Find a single Attendee with an id
 exports.findOne = (req, res) => {
+
+
   const id = req.params.id;
 
   Attendee.findById(id)
@@ -126,24 +128,33 @@ exports.findOne = (req, res) => {
 
 // Update a attendee by the id in the request
 exports.update = (req, res) => {
-  const id = req.params.id;
 
-  Attendee.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
-    .then((data) => {
-      if (!data) {
-        res.status(404).send({
-          message: `Cannot update Attendee with id=${id}. Or Attendee was not found!`,
+  const error = validationResult(req);
+
+  // Checking Error are empty or not If Empty then Show error otherwise save data todatabase
+  if (!error.isEmpty()) {
+    return res.status(403).send(error);
+  } 
+  else {
+    const id = req.params.id;
+
+    Attendee.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+      .then((data) => {
+        if (!data) {
+          res.status(404).send({
+            message: `Cannot update Attendee with id=${id}. Or Attendee was not found!`,
+          });
+        } else
+          res
+            .status(200)
+            .send({ message: "Attendee's details were updated successfully." });
+      })
+      .catch((err) => {
+        res.status(500).send({
+          message: "Error updating Attendee with id=" + id,
         });
-      } else
-        res
-          .status(200)
-          .send({ message: "Attendee's details were updated successfully." });
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: "Error updating Attendee with id=" + id,
       });
-    });
+  }
 };
 
 // Delete a Attendee with the specified id in the request
