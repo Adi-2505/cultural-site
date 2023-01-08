@@ -38,6 +38,7 @@ function Navbar() {
               {" "}
               <li className="p-4">GALLERY</li>
             </a>
+            <button className="p-2 rounded m-2 uppercase hover:bg-red-500 hover:text-white transition duration-500">registration</button>
           </ul>
         </div>
         <div className="block md:hidden" onClick={handleNav}>
