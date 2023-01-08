@@ -6,6 +6,14 @@ function Navbar() {
   const handleNav = () => {
     setNav(!nav);
   };
+  const EventLinks = [
+    { Event: "Home", Link: "/" },
+    { Event: "ABOUT", Link: "/" },
+    { Event: "EVENTS", Link: "/" },
+    { Event: "SPONSORS", Link: "/" },
+    { Event: "ORGANIZERS", Link: "/" },
+    { Event: "GALLERY", Link: "/" }]
+
   return (
     <>
       <div className="flex justify-between items-center bg-transparent">
@@ -14,30 +22,13 @@ function Navbar() {
         </div>
         <div className="mr-10">
           <ul className="hidden md:flex">
-            <a href="/" className="">
-              {" "}
-              <li className="p-4">HOME</li>
-            </a>
-            <a href="/" className="">
-              {" "}
-              <li className="p-4">ABOUT</li>
-            </a>
-            <a href="/" className="">
-              {" "}
-              <li className="p-4">EVENTS</li>
-            </a>
-            <a href="/" className="">
-              {" "}
-              <li className="p-4">SPONSORS</li>
-            </a>
-            <a href="/" className="">
-              {" "}
-              <li className="p-4">ORGANIZERS</li>
-            </a>
-            <a href="/" className="">
-              {" "}
-              <li className="p-4">GALLERY</li>
-            </a>
+            {EventLinks.map(({ Event, Link }) =>
+              <a href={Link}>
+                <li className="p-4">
+                  {Event}
+                </li>
+              </a>
+            )}
             <button className="p-2 rounded m-2 uppercase hover:bg-red-500 hover:text-white transition duration-500">registration</button>
           </ul>
         </div>
@@ -51,40 +42,23 @@ function Navbar() {
         <div
           className={
             nav
-              ? "fixed left-0 top-0 w=[60%] h-full border-r bg-black text-white border-r-white-900 ease-in-out duration-500"
-              : "fixed left-[-100%]"
+              ? "md:hidden fixed left-0 top-0 w=[60%] h-full border-r bg-black text-white border-r-white-900 ease-in-out duration-500"
+              : "fixed hidden"
           }
         >
-          <ul className="pt-24">
-            <a href="/">
-              {" "}
-              <li className="p-4 border-b border-gray-600">HOME</li>{" "}
-            </a>
-            <a href="/">
-              {" "}
-              <li className="p-4 border-b border-gray-600">ABOUT</li>{" "}
-            </a>
-            <a href="/">
-              {" "}
-              <li className="p-4 border-b border-gray-600">EVENTS</li>{" "}
-            </a>
-            <a href="/">
-              {" "}
-              <li className="p-4 border-b border-gray-600">SPONSORS</li>{" "}
-            </a>
-            <a href="/">
-              {" "}
-              <li className="p-4 border-b border-gray-600">ORGANIZERS</li>{" "}
-            </a>
-            <a href="/">
-              {" "}
-              <li className="p-4 border-b border-gray-600">GALLERY</li>{" "}
-            </a>
+          <ul className="pt-24 ">
+            {EventLinks.map(({ Event, Link }) =>
+              <a href={Link}>
+                <li className="p-4 border-b border-gray-600">
+                  {Event}
+                </li>
+              </a>
+            )}
+
           </ul>
         </div>
       </div>
     </>
   );
 }
-
 export default Navbar;
