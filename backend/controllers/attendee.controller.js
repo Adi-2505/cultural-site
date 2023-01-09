@@ -1,5 +1,5 @@
 const db = require("../models");
-const { validationResult } = require("express-validator");
+
 const nodemailer = require("nodemailer");
 const QRCode = require("qrcode");
 
@@ -7,14 +7,9 @@ const QRCode = require("qrcode");
 const Attendee = db.attendees;
 
 // function to register a new Attendee
-exports.create = async (req, res) => {
-  // Validation Result using express Validator
-  const error = validationResult(req);
+exports.create = async (req, res) => { 
 
-  // Checking Error are empty or not If Empty then Show error otherwise save data todatabase
-  if (!error.isEmpty()) {
-    return res.status(403).send(error);
-  } else {
+
     // Check if the attendee already exists
     let user = await Attendee.findOne({ email: req.body.email });
     if (user) {
@@ -85,8 +80,7 @@ exports.create = async (req, res) => {
             "Some error occurred while registering the Attendee.",
         });
       });
-  }
-};
+  };
 
 // Retrieve all attendees or specific attendee by name from the database.
 exports.findAll = (req, res) => {
@@ -129,16 +123,9 @@ exports.findOne = (req, res) => {
 // Update a attendee by the id in the request
 exports.update = (req, res) => {
 
-  const error = validationResult(req);
-
-  // Checking Error are empty or not If Empty then Show error otherwise save data todatabase
-  if (!error.isEmpty()) {
-    return res.status(403).send(error);
-  } 
-  else {
     const id = req.params.id;
 
-    Attendee.findByIdAndUpdate(id, req.body, { useFindAndModify: false })
+    Attendee.findByIdAndUpdate(id, req.body, { useFindAndModify: false,runValidators:true })
       .then((data) => {
         if (!data) {
           res.status(404).send({
@@ -151,11 +138,11 @@ exports.update = (req, res) => {
       })
       .catch((err) => {
         res.status(500).send({
-          message: "Error updating Attendee with id=" + id,
+          message: err.message + " -: Error updating Attendee with id=" + id,
         });
       });
   }
-};
+
 
 // Delete a Attendee with the specified id in the request
 exports.delete = (req, res) => {
