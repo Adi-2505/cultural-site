@@ -53,4 +53,4 @@ schema.method("toJSON", function () {
 
 const Sponsor = new mongoose.model("sponsor", schema);
 
-module.exports = { Sponsor };
+module.exports = Sponsor ;
