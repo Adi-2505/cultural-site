@@ -5,8 +5,7 @@ function Home() {
     <>
       <div className="relative h-screen w-99vw">
         <video
-          className="absolute top-0 left-0 h-full w-full object-cover"
-          loop
+          className="absolute top-0 left-0 h-full w-full object-cover" autoPlay loop muted
         >
           <source src={Video} type="video/mp4" />
         </video>
