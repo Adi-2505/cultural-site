@@ -7,14 +7,9 @@ const QRCode = require("qrcode");
 const Attendee = db.attendees;
 
 // function to register a new Attendee
-exports.create = async (req, res) => {
-  // Validation Result using express Validator
-  const error = validationResult(req);
+exports.create = async (req, res) => { 
 
-  // Checking Error are empty or not If Empty then Show error otherwise save data todatabase
-  if (!error.isEmpty()) {
-    return res.status(403).send(error);
-  } else {
+
     // Check if the attendee already exists
     let user = await Attendee.findOne({ email: req.body.email });
     if (user) {
@@ -85,8 +80,7 @@ exports.create = async (req, res) => {
             "Some error occurred while registering the Attendee.",
         });
       });
-  }
-};
+  };
 
 // Retrieve all attendees or specific attendee by name from the database.
 exports.findAll = (req, res) => {
