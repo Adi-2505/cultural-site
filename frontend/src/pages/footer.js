@@ -20,8 +20,8 @@ function Footer() {
 
 
 
-      <div class="flex-container">
-        <div class="flex-item-left">
+      <div className="flex-container">
+        <div className="flex-item-left">
           <div className="p-16 mx-auto bg-black rounded-xl shadow-lg flex  space-x-4">
             <div>
               <div className="text-xl font-medium text-white">ABOUT US</div>
@@ -52,7 +52,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div class="flex-item-right grid items-center ">
+        <div className="flex-item-right grid items-center ">
           <iframe className='map' src={mapSrc} title="IIIT KOTA"></iframe>
 
         </div>

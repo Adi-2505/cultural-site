@@ -1,4 +1,4 @@
-*{
+* {
 
     /* background-color: black; */
 }
@@ -51,7 +51,7 @@ footer {
     justify-content: center;
     line-height: 1;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    
+
 }
 
 .social-icon a::before {
@@ -63,7 +63,7 @@ footer {
     border-radius: 50%;
     transform: scale(0);
     transition: 0.3s ease-in-out;
-    
+
 }
 
 .social-icon a:hover::before {
@@ -79,7 +79,7 @@ footer {
 
 .social-icon a:hover img {
     filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
-    
+
 }
 
 .footer img {
@@ -132,5 +132,41 @@ footer {
 @media (max-width: 800px) {
     .flex-container {
         flex-direction: column;
+    }
+}
+
+
+
+/* GoTOStop CSS: */
+.App {
+    /* height: 5000px; */
+    /* scroll-behavior: smooth; */
+}
+
+.scrollTop {
+    position: fixed;
+    width: 100%;
+    bottom: 20px;
+    align-items: center;
+    height: 20px;
+    justify-content: center;
+    z-index: 1000;
+    cursor: pointer;
+    animation: fadeIn 0.3s;
+    transition: opacity 0.4s;
+    opacity: 0.5;
+}
+
+.scrollTop:hover {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
