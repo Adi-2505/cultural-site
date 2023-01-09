@@ -18,7 +18,7 @@ function Navbar() {
         </div>
         <div className="mr-10 text-white">
           <ul className="hidden md:flex">
-            {EventLinks.map(({ Event, Link, icon }) => (
+            {EventLinks.map(({ Event, Link}) => (
               <a href={Link}>
                 <li className="p-4">{Event}</li>
               </a>
