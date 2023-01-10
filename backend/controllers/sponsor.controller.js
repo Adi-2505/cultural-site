@@ -1,7 +1,7 @@
 const db = require("../models");
 
 // Importing the Sponsor schema model
-const Attendee = db.attendees;
+const Sponsor = db.sponsors;
 
 // function to register a new Sponsor
 exports.create = async (req, res) => {
@@ -9,8 +9,8 @@ exports.create = async (req, res) => {
   const sponsor = new Sponsor(req.body);
 
   // Save Sponsor details in the database
-  attendee
-    .save(attendee)
+  sponsor
+    .save(sponsor)
     .then((data) => {
       res.status(200).send({ message: "Sponsor registered successfully!" });
     })
