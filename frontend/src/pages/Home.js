@@ -1,5 +1,7 @@
 import React from "react";
 import Video from "..//videos/homepagevideo.mp4";
+import Sound from 'react-sound';
+import background1 from "..//videos/background1.mp3";
 function Home() {
   return (
     <>
@@ -12,6 +14,11 @@ function Home() {
         >
           <source src={Video} type="video/mp4" />
         </video>
+        <Sound
+          url={background1}
+          playStatus={Sound.status.PLAYING}
+          loop={true}
+        />
         <div className="absolute z-1 text-white home-fest-name">
           FLARE FIESTA
         </div>
