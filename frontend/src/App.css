@@ -2,8 +2,9 @@
 
     /* background-color: black; */
 }
+
 /* fest name and date homepage */
-.home-fest-name{
+.home-fest-name {
     width: 532px;
     height: 384px;
     left: 65px;
@@ -13,10 +14,11 @@
     font-weight: 400;
     font-size: 128px;
     line-height: 120%;
-    letter-spacing : 2px;
-    text-shadow : 15px 15px 30px '#00000';
+    letter-spacing: 2px;
+    text-shadow: 15px 15px 30px '#00000';
 }
-.home-fest-date{
+
+.home-fest-date {
     width: 500px;
     height: 27px;
     left: 65px;
@@ -26,17 +28,16 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
-    letter-spacing : 2px;
-    text-shadow : 15px 15px 30px '#00000';
+    letter-spacing: 2px;
+    text-shadow: 15px 15px 30px '#00000';
 
 }
+
 /*  end fest name and date homepage */
 footer {
     background-color: black;
     /* width: 100% !important;
     position: absolute !important; */
-
-
 }
 
 .map {
@@ -54,10 +55,10 @@ footer {
     /* margin-right: 42px; */
     width: 100%;
     background-color: black;
-
-
 }
-
+.navbar-items:hover{
+    color: red;
+}
 
 
 .social-icon {
@@ -112,16 +113,11 @@ footer {
     width: 10vh;
     /* margin-left: 20px; */
     display: inline-block;
-
-
-
 }
 
 .logo-footer {
     width: 10%;
     margin-left: 44px;
-
-
 }
 
 .copyrightText {
@@ -131,7 +127,6 @@ footer {
     letter-spacing: 0.5px;
     margin-top: 20px;
     text-align: center;
-
 }
 
 /*  */
@@ -156,35 +151,38 @@ footer {
 }
 
 @media (max-width: 800px) {
-    /* fest name and date homepage */
-.home-fest-name{
-    width: 332px;
-    height: 304px;
-    left: 65px;
-    top: 180px;
-    font-family: Audiowide;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 88px;
-    line-height: 120%;
-    letter-spacing : 2px;
-    text-shadow : 15px 15px 30px '#00000';
-}
-.home-fest-date{
-    width: 300px;
-    height: 27px;
-    left: 65px;
-    top: 444px;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 120%;
-    letter-spacing : 2px;
-    text-shadow : 15px 15px 30px '#00000';
 
-}
-/*  end fest name and date homepage */
+    /* fest name and date homepage */
+    .home-fest-name {
+        width: 332px;
+        height: 304px;
+        left: 65px;
+        top: 180px;
+        font-family: Audiowide;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 88px;
+        line-height: 120%;
+        letter-spacing: 2px;
+        text-shadow: 15px 15px 30px '#00000';
+    }
+
+    .home-fest-date {
+        width: 300px;
+        height: 27px;
+        left: 65px;
+        top: 444px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        letter-spacing: 2px;
+        text-shadow: 15px 15px 30px '#00000';
+
+    }
+
+    /*  end fest name and date homepage */
     .flex-container {
         flex-direction: column;
     }

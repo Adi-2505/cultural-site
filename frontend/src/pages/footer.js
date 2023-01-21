@@ -4,8 +4,7 @@ import logo2 from "../images/footer-img/logo_iiit_kota.png";
 import navIcon1 from "../images/footer-img/nav-icon1.svg";
 import navIcon2 from "../images/footer-img/nav-icon2.svg";
 import navIcon3 from "../images/footer-img/nav-icon3.svg";
-import navIcon4 from "../images/footer-img/twitter.png";
-import twitter from "../images/footer-img/twitter.svg";
+import navIcon4 from "../images/footer-img/nav-icon4.svg";
 
 function Footer() {
 
@@ -58,7 +57,7 @@ function Footer() {
             <a href="/#"><img src={navIcon1} alt="Icon" /></a>
             <a href="/#"><img src={navIcon2} alt="Icon" /></a>
             <a href="/#"><img src={navIcon3} alt="Icon" /></a>
-            <a href="/#"><img src={twitter} alt="Icon" /></a>
+            <a href="/#"><img src={navIcon4} alt="Icon" /></a>
           </div>
 
         </div>

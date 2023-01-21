@@ -23,7 +23,7 @@ function Navbar() {
               <a href={EventLinks.Link}>
                 <div className="flex items-center">
                 <EventLinks.icon className="h-4 flex-1" />
-                <li className="flex-1 p-4">{EventLinks.Event}</li>
+                <li className="navbar-items flex-1 p-4">{EventLinks.Event}</li>
                 </div>
               </a>
               
