@@ -1,56 +1,64 @@
 // Schema for Sponsor
-var mongoose = require("mongoose");
-var schema = mongoose.Schema(
-  {
-    name: {
-      type:String,
-      trim:true,
-      required:[true,'Name is Required'],
-      maxLength:[30,"Max length allowed is 30"]
+module.exports = (mongoose) => {
+  var schema = mongoose.Schema(
+    {
+      name: {
+        type: String,
+        trim: true,
+        required: [true, "Name is Required"],
+        maxLength: [30, "Max length allowed is 30"],
+      },
+      organizationName: {
+        type: String,
+        trim: true,
+        required: [true, "Please Enter Organisation Name"],
+        unique: true,
+        maxLength: [30, "Max Length allowed is 30"],
+      },
+      interest: {
+        type: Array,
+        required: [true, "Please Enter Intrest"],
+      },
+      website: {
+        type: String,
+        trim: true,
+        match: [
+          /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-/]))?/,
+          "Please Enter Correct URL",
+        ],
+      },
+      email: {
+        type: String,
+        trim: true,
+        lowercase: true,
+        required: [true, "Email is Required"],
+        unique: [true],
+        match: [
+          /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+          "Please fill a valid email address",
+        ],
+      },
+      contact: {
+        type: String,
+        trim: true,
+        required: [true, "Contact Number is Required"],
+        unique: [true],
+        match: [
+          /^(\d{3})[- ]?(\d{3})[- ]?(\d{4})$/,
+          "Please enter correct Contact Number",
+        ],
+      },
     },
-    organizationName: {
-      type:String,
-      trim:true,
-      required:[true,'Please Enter Organisation Name'],
-      unique:true,
-      maxLength:[30,"Max Length allowed is 30"],
 
-    },
-    intrest:{
-      type:Array,
-      required:[true,'Please Enter Intrest'],  
-    },
-    website:{
-      type:String,
-      trim:true,
-      match:[/(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-/]))?/,"Please Enter Correct URL"]
-    },
-    email: {
-      type:String,
-      trim:true,
-      lowercase:true,
-      required:[true,'Email is Required'],
-      unique:[true],
-      match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
-    },
-    contact: {
-      type:String,
-      trim:true,
-      required:[true,'Contact Number is Required'],
-      unique:[true],
-      match:[/^(\d{3})[- ]?(\d{3})[- ]?(\d{4})$/,'Please enter correct Contact Number']
-    },
-  },
+    { timestamps: true }
+  );
 
-  { timestamps: true }
-);
+  schema.method("toJSON", function () {
+    const { __v, _id, ...object } = this.toObject();
+    object.id = _id;
+    return object;
+  });
 
-schema.method("toJSON", function () {
-  const { __v, _id, ...object } = this.toObject();
-  object.id = _id;
-  return object;
-});
-
-const Sponsor = new mongoose.model("sponsor", schema);
-
-module.exports = Sponsor ;
+  const Sponsor = new mongoose.model("sponsor", schema);
+  return Sponsor;
+};
