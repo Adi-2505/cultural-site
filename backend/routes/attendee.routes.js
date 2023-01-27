@@ -7,6 +7,12 @@ module.exports = (app) => {
   // Register a new attendee
   router.post("/", attendees.create);
 
+  // verify email
+  router.get("/verify/:id/:uniqueString", attendees.verify); 
+
+  // email verified
+  router.get("/verified/:message", attendees.verified);
+
   // Retrieve all attendees
   router.get("/", attendees.findAll);
 

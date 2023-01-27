@@ -3,38 +3,44 @@ module.exports = (mongoose) => {
   var schema = mongoose.Schema(
     {
       name: {
-        type:String,
-        trim:true,
-        required:[true,'Name is Required'],
-        maxLength:[30,"Max length allowed is 30"]
+        type: String,
+        trim: true,
+        required: [true, 'Name is Required'],
+        maxLength: [30, "Max length allowed is 30"]
       },
       gender: {
-        type:String,
-        trim:true,
-        required:[true,'Gender is Required'],
-        maxLength:[10,"Max Length allowed is 10"],
+        type: String,
+        trim: true,
+        required: [true, 'Gender is Required'],
+        maxLength: [10, "Max Length allowed is 10"],
       },
-      college:{
-        type:String,
-        trim:true,
-        required:[true,'college Name is Required'],
-        maxLength:[30,"Max length allowed is 30"],
+      college: {
+        type: String,
+        trim: true,
+        required: [true, 'college Name is Required'],
+        maxLength: [30, "Max length allowed is 30"],
       },
       email: {
-        type:String,
-        trim:true,
-        lowercase:true,
-        required:[true,'Email is Required'],
-        unique:[true],
+        type: String,
+        trim: true,
+        lowercase: true,
+        required: [true, 'Email is Required'],
+        unique: [true],
         match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
       },
       contact: {
-        type:String,
-        trim:true,
-        required:[true,'Contact Number is Required'],
-        unique:[true],
-        match:[/^(\d{3})[- ]?(\d{3})[- ]?(\d{4})$/,'Please enter correct Contact Number']
+        type: String,
+        trim: true,
+        required: [true, 'Contact Number is Required'],
+        unique: [true],
+        match: [/^(\d{3})[- ]?(\d{3})[- ]?(\d{4})$/, 'Please enter correct Contact Number']
       },
+      password:{
+        type: String,
+        required: [true, "Password is required"],
+        // TODO: Validation of password
+      },
+      verified: Boolean
     },
 
     { timestamps: true }
