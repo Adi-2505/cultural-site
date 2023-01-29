@@ -24,6 +24,7 @@ db.mongoose
 // Importing api routes
 require("./routes/attendee.routes")(app);
 require("./routes/sponsor.routes")(app);
+require("./routes/events.routes")(app);
 
 // Set port to listen for requests
 const PORT = process.env.PORT;
