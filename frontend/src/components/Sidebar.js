@@ -1,6 +1,11 @@
 import React, { useState } from "react";
-import {AiOutlineMenu,AiOutlineClose} from "react-icons/ai";
-import { HiHome,HiUserGroup,HiPhotograph,HiCalendar,HiDocumentText,HiHeart } from "react-icons/hi";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import {
+  HiHome,
+  HiCalendar,
+  HiDocumentText,
+  HiHeart,
+} from "react-icons/hi";
 
 function Sidebar() {
   const [nav, setNav] = useState(false);
@@ -8,12 +13,10 @@ function Sidebar() {
     setNav(!nav);
   };
   const EventLinks = [
-    { Event: "HOME", Link: "/", icon: HiHome },
-    { Event: "ABOUT", Link: "/", icon: HiDocumentText },
-    { Event: "EVENTS", Link: "/", icon: HiCalendar },
-    { Event: "SPONSORS", Link: "/", icon: HiHeart},
-    { Event: "ORGANIZERS", Link: "/", icon: HiUserGroup },
-    { Event: "GALLERY", Link: "/", icon: HiPhotograph },
+    { Event: "HOME", Link: "/", Icon: HiHome },
+    { Event: "ABOUT", Link: "/", Icon: HiDocumentText },
+    { Event: "SCHEDULE", Link: "/", Icon: HiCalendar },
+    { Event: "SPONSORS US", Link: "/", Icon: HiHeart },
   ];
   return (
     <>
@@ -27,7 +30,7 @@ function Sidebar() {
       <div
         className={
           nav
-            ? "fixed z-20 left-0 w-1/3 text-white font-bold bg-gradient-to-tl from-white/10 to-[#030003] border-r-black-900 ease-in-out duration-500"
+            ? "fixed z-20 left-0 h-full w-1/3 text-white font-bold bg-gradient-to-tl from-white/10 to-[#030003] border-r-black-900 ease-in-out duration-500"
             : "fixed left-[-100%]"
         }
       >
@@ -35,16 +38,14 @@ function Sidebar() {
           {EventLinks.map((EventLinks) => (
             <a href={EventLinks.Link}>
               <div className="flex items-center border-b border-gray-600">
-                <EventLinks.icon className="h-4 flex-1" />
-                <li className="flex-1  p-2 ">
-                  {EventLinks.Event}
-                </li>
+                <EventLinks.Icon className="h-4 flex-1" />
+                <li className="flex-1  p-2 ">{EventLinks.Event}</li>
               </div>
             </a>
           ))}
         </ul>
-        <button className="d-flex align-items-left m-58em p-2 rounded uppercase hover:bg-red-500 hover:text-white transition duration-500">
-          Register now
+        <button className="d-flex align-items-left m-58em p-2 rounded uppercase navbarbutton navitems transition duration-500">
+          PRE-Register
         </button>
       </div>
     </>

@@ -1,7 +1,6 @@
 import React from "react";
 import Video from "..//videos/homepagevideo.mp4";
-import Sound from 'react-sound';
-import background1 from "..//videos/background1.mp3";
+import centerlogo from "..//images/center_logo.png";
 function Home() {
   return (
     <>
@@ -14,16 +13,11 @@ function Home() {
         >
           <source src={Video} type="video/mp4" />
         </video>
-        <Sound
-          url={background1}
-          playStatus={Sound.status.PLAYING}
-          loop={true}
-        />
-        <div className="absolute z-1 text-white home-fest-name">
-          FLARE FIESTA
+        <div className="homepage-centerlogo">
+          <img src={centerlogo} alt = "loading"/>
         </div>
-        <div className="absolute z-1 text-white flex home-fest-date">
-          From XXth Feb - XX Feb
+        <div className="homepage-button transition duration-1000">
+          <button>REGISTER</button>
         </div>
       </div>
     </>

@@ -1,19 +1,41 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../images/logo.png";
 import Sidebar from "../components/Sidebar";
-import { HiHome,HiUserGroup,HiPhotograph,HiCalendar,HiDocumentText,HiHeart } from "react-icons/hi";
+import { HiHome, HiCalendar, HiDocumentText, HiHeart } from "react-icons/hi";
+
 function Navbar() {
+  const [show, handleshow] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        handleshow(true);
+      } else {
+        handleshow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const EventLinks = [
     { Event: "HOME", Link: "/", icon: HiHome },
     { Event: "ABOUT", Link: "/", icon: HiDocumentText },
-    { Event: "EVENTS", Link: "/", icon: HiCalendar },
-    { Event: "SPONSORS", Link: "/", icon: HiHeart},
-    { Event: "ORGANIZERS", Link: "/", icon: HiUserGroup },
-    { Event: "GALLERY", Link: "/", icon: HiPhotograph },
+    { Event: "SCHEDULE", Link: "/", icon: HiCalendar },
+    { Event: "SPONSORS US", Link: "/", icon: HiHeart },
   ];
   return (
     <>
-      <div className="flex justify-between items-center bg-transparent fixed top-0 w-full z-10">
+      <div
+        className={`flex justify-between items-center ${
+          !show && "bg-transparent"
+        } ${
+          show && "navscroll"
+        } fixed top-0 w-full z-10 transition duration-1000`}
+      >
         <div>
           <img src={logo} alt="loading" className="h-14 p-1.5 md:h-20 md:p-2" />
         </div>
@@ -22,18 +44,20 @@ function Navbar() {
             {EventLinks.map((EventLinks) => (
               <a href={EventLinks.Link}>
                 <div className="flex items-center">
-                <EventLinks.icon className="h-4 flex-1" />
-                <li className="navbar-items flex-1 p-4">{EventLinks.Event}</li>
+                  <li className="flex-1 p-3  ml-2 mr-2 navitems">
+                    {EventLinks.Event}
+                  </li>
                 </div>
               </a>
-              
             ))}
-            <button className="p-2 rounded m-2 uppercase hover:bg-red-500 hover:text-white transition duration-500">
-              Register Now
+            <button className="p-2 rounded m-1 uppercase navbarbutton navitems transition duration-500">
+              PRE-Register
             </button>
           </ul>
         </div>
-        <div className="flex md:hidden"><Sidebar/> </div>
+        <div className="flex md:hidden">
+          <Sidebar />{" "}
+        </div>
       </div>
     </>
   );
