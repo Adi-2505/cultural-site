@@ -3,37 +3,60 @@
     /* background-color: black; */
 }
 
-/* fest name and date homepage */
-.home-fest-name {
-    width: 532px;
-    height: 384px;
-    left: 65px;
-    top: 150px;
-    font-family: Audiowide;
+/* fest name and button homepage */
+.navbarbutton:hover {
+    background-color: #F7FF92;
+    border-radius: 20px;
+    color: black;
+}
+.navscroll{
+    background: #050117;
+}
+.navitems {
+    font-family: 'Outfit';
     font-style: normal;
-    font-weight: 400;
-    font-size: 128px;
-    line-height: 120%;
-    letter-spacing: 2px;
-    text-shadow: 15px 15px 30px '#00000';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
 }
 
-.home-fest-date {
-    width: 500px;
-    height: 27px;
-    left: 65px;
-    top: 544px;
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 120%;
-    letter-spacing: 2px;
-    text-shadow: 15px 15px 30px '#00000';
+.homepage-button {
+    display: flex;
+    position: absolute;
+    top: 75%;
+    left: 45%;
+    align-items: center;
+    border-radius: 70px;
+    background-color: #F7FF92;
+    border: 1px solid #F7FF92;
+    color: black;
+    font-size: 1.4rem;
+    padding: 0 50px;
+    width: 200px;
+    height: 70px;
+}
 
+.homepage-button:hover {
+    cursor: pointer;
+    background: white;
+    border: none;
+    font-weight: bolder;
+    color: #F7FF92;
+}
+
+.homepage-centerlogo {
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    left: 450px;
+}
+
+.homepage-centerlogo img {
+    height: 400px;
 }
 
 /*  end fest name and date homepage */
+
 footer {
     background-color: black;
     /* width: 100% !important;
@@ -43,7 +66,6 @@ footer {
 .map {
     margin-top: 20px;
     margin-bottom: 20px;
-
     border-radius: 20px;
     display: inline-block;
     position: relative;
@@ -56,10 +78,6 @@ footer {
     width: 100%;
     background-color: black;
 }
-.navbar-items:hover{
-    color: red;
-}
-
 
 .social-icon {
     display: inline-block;
@@ -153,38 +171,46 @@ footer {
 @media (max-width: 800px) {
 
     /* fest name and date homepage */
-    .home-fest-name {
-        width: 332px;
-        height: 304px;
-        left: 65px;
-        top: 180px;
-        font-family: Audiowide;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 88px;
-        line-height: 120%;
-        letter-spacing: 2px;
-        text-shadow: 15px 15px 30px '#00000';
-    }
-
-    .home-fest-date {
-        width: 300px;
-        height: 27px;
-        left: 65px;
-        top: 444px;
-        font-family: Poppins;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 120%;
-        letter-spacing: 2px;
-        text-shadow: 15px 15px 30px '#00000';
-
-    }
 
     /*  end fest name and date homepage */
     .flex-container {
         flex-direction: column;
+    }
+
+    .homepage-centerlogo {
+        align-items: center;
+        position: absolute;
+        top: 190px;
+        left: 100px;
+    }
+
+    .homepage-centerlogo img {
+        height: 250px;
+        width: 400px;
+    }
+
+    .homepage-button {
+        top: 70%;
+        left: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage-centerlogo {
+        align-items: center;
+        position: absolute;
+        top: 230px;
+        left: 50px;
+    }
+
+    .homepage-centerlogo img {
+        height: 200px;
+        width: 330px;
+    }
+
+    .homepage-button {
+        top: 70%;
+        left: 100px;
     }
 }
 
