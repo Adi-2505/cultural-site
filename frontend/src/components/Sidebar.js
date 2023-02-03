@@ -14,10 +14,11 @@ function Sidebar() {
   };
   const EventLinks = [
     { Event: "HOME", Link: "/", Icon: HiHome },
-    { Event: "ABOUT", Link: "/", Icon: HiDocumentText },
-    { Event: "SCHEDULE", Link: "/", Icon: HiCalendar },
-    { Event: "SPONSORS US", Link: "/", Icon: HiHeart },
+    { Event: "ABOUT", Link: "#About", Icon: HiDocumentText },
+    { Event: "SCHEDULE", Link: "#Schedule", Icon: HiCalendar },
+    { Event: "SPONSORS US", Link: "#Sponsor", Icon: HiHeart },
   ];
+
   return (
     <>
       <div className="block md:hidden" onClick={handleNav}>
