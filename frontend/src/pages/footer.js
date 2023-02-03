@@ -13,7 +13,7 @@ function Footer() {
     <footer className='footer'>
       <div className="flex-container">
         <div className="flex-item-left">
-          <div className="p-16 mx-auto bg-black rounded-xl shadow-lg flex  space-x-4">
+          <div className="p-16 mx-auto  rounded-xl  flex  space-x-4">
             <div>
               <div className="text-xl font-medium text-white">ABOUT US</div>
               <p className="text-slate-500">CREATIVE ARTS AND CULTURAL <br />
@@ -26,7 +26,7 @@ function Footer() {
               <p className="text-slate-500">cacs@iiitkota.ac.in</p>
             </div>
           </div>
-          <div className="px-16 mx-auto bg-black rounded-xl shadow-lg flex  space-x-4">
+          <div className="px-16 mx-auto bg rounded-xl flex  space-x-4">
             <div className='px-2'>
               <div className=" text-xl font-medium text-white">CONTACT US</div>
               <p className="text-slate-500">EMAIL : <br />
@@ -56,14 +56,14 @@ function Footer() {
           <div className="social-icon ">
             <a href="/#"><img src={navIcon1} alt="Icon" /></a>
             <a href="/#"><img src={navIcon2} alt="Icon" /></a>
-            <a href="/#"><img src={navIcon3} alt="Icon" /></a>
+            <a href="https://instagram.com/flairfiesta?igshid=Yzg5MTU1MDY="><img src={navIcon3} alt="Icon" /></a>
             <a href="/#"><img src={navIcon4} alt="Icon" /></a>
           </div>
 
         </div>
       </div>
       <div>
-        <p className="copyrightText text-white ">Copyright 2023. All Rights Reserved</p>
+        <p className="copyrightText text-white ">&copy; FLAIRFIESTA 2023. All Rights Reserved</p>
       </div>
     </footer>
 

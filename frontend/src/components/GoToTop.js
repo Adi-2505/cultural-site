@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FaArrowCircleUp } from 'react-icons/fa';
 import '../App.css';
 
 
@@ -29,11 +28,11 @@ const GoToTop = () => {
     return (
 
 
-        <div className="grid grid-flow-row auto-rows-max">
         <div>
 
-            <FaArrowCircleUp className="scrollTop" onClick={scrollTop} style={{ color: 'red', height: 40, display: showScroll ? 'flex' : 'none' }} />
-        </div>
+            <div className="scrollTop" onClick={scrollTop} style={{fontSize:30, color: 'white', backgroundColor: 'black', height: 40, display: 'flex',alignItems: 'center', justifycontent: 'center', cursor: 'pointer',}} >
+                BACK TO TOP
+            </div>
         </div>
 
 
