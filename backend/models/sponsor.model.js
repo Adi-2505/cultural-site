@@ -7,6 +7,13 @@ module.exports = (mongoose) => {
         trim: true,
         required: [true, "Name is Required"],
         maxLength: [30, "Max length allowed is 30"],
+        minLength: [2, "Length should be greater than 2"],
+        validate: {
+          validator: function(v) {
+            return /^[a-zA-Z]+$/.test(v);
+          },
+          message: props => `${props.value} is not a valid name!`
+        }
       },
       organizationName: {
         type: String,
@@ -14,6 +21,12 @@ module.exports = (mongoose) => {
         required: [true, "Please Enter Organisation Name"],
         unique: true,
         maxLength: [30, "Max Length allowed is 30"],
+        validate: {
+          validator: function(v) {
+            return /^[a-zA-Z]+$/.test(v);
+          },
+          message: props => `${props.value} is not a valid name!`
+        }
       },
       interest: {
         type: Array,
@@ -44,7 +57,7 @@ module.exports = (mongoose) => {
         required: [true, "Contact Number is Required"],
         unique: [true],
         match: [
-          /^(\d{3})[- ]?(\d{3})[- ]?(\d{4})$/,
+          /^[0-9]+$/,
           "Please enter correct Contact Number",
         ],
       },
