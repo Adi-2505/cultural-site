@@ -23,17 +23,7 @@ function Content() {
                     ABOUT US
                   </div>
                   <p className="text-slate-500 content1">
-                    Flair fiesta is a highly anticipated college festival that
-                    features and diverse range of cultural and technical
-                    activities. The festival showcases talents from music and
-                    dance performances to fashion shows and creative writing
-                    compititions on the technical side, there are robotics
-                    challenges, coding compititions and hackthons. To satiate
-                    the hunger of visitors, there are food stalls that serve a
-                    varity of cuisines, ranging from street food to fine dining.
-                    With a perfect blend of creativity, skill, entertainment,
-                    Flair Fiesta is must-attend event for all students and young
-                    adults.
+                  Flair fiesta is a highly anticipated college festival that features and diverse range of cultural and technical activities. The festival showcases talents from music and dance performances to fashion shows and creative writing competitions on the technical side, there are robotics challenges, coding competitions, and hackathons. To satiate the hunger of visitors, there are food stalls that serve a variety of cuisines, ranging from street food to fine dining. With a perfect blend of creativity, skill, and entertainment, Flair Fiesta is a must-attend event for all students and young adults.
                   </p>
                 </div>
               </div>
@@ -105,7 +95,7 @@ function Content() {
             <p>
               Join us as a sponsor for Flair Fiesta, the annual cultural
               festival of IIIT Kota and <br /> reach out to a young and dynamic
-              audience of over 2000 students
+              audience of over 10000+ foot fall
             </p>
           </div>
 
@@ -115,8 +105,9 @@ function Content() {
             transition={{ stiffness: 50 }}
             className="sponsor-button transition lowbutton"
           >
-            <a className="newbutton" href="/">
-              REGISTER
+            <a className="newbutton" href="https://forms.gle/MbANvMWjVBxmaQcYA"
+            target="__blank">
+              Sponsor
             </a>
           </motion.div>
         </section>

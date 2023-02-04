@@ -25,8 +25,12 @@ function Footer() {
                 </p>
               </div>
               <div>
-                <div className="text-xl font-medium text-white">LINKS</div>
-                <p className="text-slate-500">cacs@iiitkota.ac.in</p>
+                <div className="text-xl font-medium text-white">ADDRESS</div>
+                <p className="text-slate-500">
+                  2nd floor, Prabha Bhavan, <br />
+                  MNIT campus, JLN Marg, <br />
+                  Jaipur , Rajasthan 302017
+                </p>
               </div>
             </div>
             <br />
@@ -37,19 +41,15 @@ function Footer() {
                   CONTACT US
                 </div>
                 <p className="text-slate-500">
-                  EMAIL : <br />
-                  PHONE : +91 xxxxxxxxx <br />
-                  SUPPORT : support@iiitkota.ac.in
+                  team@flairfiesta.in <br />
+                  cacs@iiitkota.ac.in <br />
+                  +91 9808455106 (CACS President) <br />
+                  +91 9808455106 (CACS Vice-President) <br />
+                  +91 9808455106 (CACS General Seceratory) <br />
+                  +91 9808455106 (CACS Technical Seceratory) <br />
                 </p>
               </div>
-              <div>
-                <div className="text-xl font-medium text-white">ADDRESS</div>
-                <p className="text-slate-500">
-                  2nd floor, Prabha Bhavan, <br />
-                  MNIT campus, JLN Marg, <br />
-                  Jaipur , Rajasthan 302017
-                </p>
-              </div>
+  
             </div>
           </div>
         </div>
@@ -67,19 +67,18 @@ function Footer() {
         </div>
         <div className="grid justify-items-end">
           <div className="social-icon ">
-            <a href="/#">
-              <img src={navIcon1} alt="Icon" />
-            </a>
-            <a href="/#">
+            <a href="https://www.facebook.com/iiitkfd">
               <img src={navIcon2} alt="Icon" />
             </a>
             <a
-              href="https://instagram.com/flairfiesta?igshid=Yzg5MTU1MDY="
+              href="https://www.instagram.com/flair_fiesta/"
               target="__blank"
             >
               <img src={navIcon3} alt="Icon" />
             </a>
-            <a href="/#">
+            <a href="https://twitter.com/IIITKotaOffice"
+            target="__blank"
+            >
               <img src={navIcon4} alt="Icon" />
             </a>
           </div>
