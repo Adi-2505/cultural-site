@@ -1,25 +1,21 @@
 import React from "react";
-import Particles from "react-tsparticles";
-import { loadSeaAnemonePreset } from "tsparticles-preset-sea-anemone";
-// import "./styles.css";
+import vdo from "../videos/intro.mp4";
 
-export default function Intro() {
-    const customInit = (tsParticles) => {
-        loadSeaAnemonePreset(tsParticles);
-    };
-
-    const options = {
-        preset: "seaAnemone",
-        backgroundMode: {
-            enable: true,
-            zIndex: -1
-        }
-    };
-
-    return (
-
-
-        <Particles options={options} init={customInit} />
-
-    );
+function Intro() {
+  return (
+    <>
+      <div style={{ backgroundColor: "black" }}>
+        <video
+          className="absolute top-0 left-0 h-full w-full object-cover"
+          autoPlay
+          loop
+          muted
+        >
+          <source src={vdo} type="video/mp4" />
+        </video>
+      </div>
+    </>
+  );
 }
+
+export default Intro;

@@ -22,15 +22,15 @@ function Navbar() {
   }, []);
 
   const EventLinks = [
-    { Event: "HOME", Link: "/", icon: HiHome },
-    { Event: "ABOUT", Link: "/", icon: HiDocumentText },
-    { Event: "SCHEDULE", Link: "/", icon: HiCalendar },
-    { Event: "SPONSORS US", Link: "/", icon: HiHeart },
+    { Event: "HOME", Link: "", icon: HiHome },
+    { Event: "ABOUT", Link: "#About", icon: HiDocumentText },
+    { Event: "SCHEDULE", Link: "#Schedule", icon: HiCalendar },
+    { Event: "SPONSORS US", Link: "#Sponsor", icon: HiHeart },
   ];
   return (
     <>
       <div
-        className={`flex justify-between items-center ${
+        className={`flex justify-between items-center  ${
           !show && "bg-transparent"
         } ${
           show && "navscroll"
@@ -39,24 +39,26 @@ function Navbar() {
         <div>
           <img src={logo} alt="loading" className="h-14 p-1.5 md:h-20 md:p-2" />
         </div>
-        <div className="flex-column mr-10 text-white font-bold">
-          <ul className="hidden md:flex pr-11">
-            {EventLinks.map((EventLinks) => (
-              <a href={EventLinks.Link}>
-                <div className="flex items-center">
-                  <li className="flex-1 p-3  ml-2 mr-2 navitems">
-                    {EventLinks.Event}
-                  </li>
-                </div>
-              </a>
-            ))}
-            <button className="p-2 rounded m-1 uppercase navbarbutton navitems transition duration-500">
-              PRE-Register
-            </button>
-          </ul>
-        </div>
-        <div className="flex md:hidden">
-          <Sidebar />{" "}
+        <div className="hidden md:block">
+          <div className="flex-column mr-10 text-white font-bold ">
+            <ul className="hidden md:flex pr-11">
+              {EventLinks.map((EventLinks) => (
+                <a href={EventLinks.Link}>
+                  <div className="flex items-center">
+                    <li className="flex-1 p-3  ml-2 mr-2 navitems">
+                      {EventLinks.Event}
+                    </li>
+                  </div>
+                </a>
+              ))}
+              <button className="p-2 rounded m-1 uppercase navbarbutton navitems transition duration-500">
+                PRE-Register
+              </button>
+            </ul>
+          </div>
+          <div className="flex md:hidden">
+            <Sidebar />{" "}
+          </div>
         </div>
       </div>
     </>
