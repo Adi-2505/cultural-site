@@ -62,7 +62,7 @@ module.exports = (mongoose) => {
           validator: function (value) {
             return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(value);
           },
-          message: "Password must contain at least 8 characters, including a number and a special character"
+          message: "Password must contain minimum eight characters, at least one upper case English letter, one lower case English letter, one number and one special character"
         }
       },
       verified: Boolean
