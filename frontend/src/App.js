@@ -3,7 +3,7 @@ import Navbar from "./pages/navbar";
 import Footer from "./pages/footer";
 
 import Home from "./pages/Home";
-import GoToTop from "./components/GoToTop";
+// import GoToTop from "./components/GoToTop";
 import Content from "./pages/Content";
 
 import Intro from "./components/Intro.js";
@@ -19,13 +19,13 @@ function App() {
     setLoads(true);
     setTimeout(() => {
       setLoads(false);
-    }, 3100);
+    }, 0);
   }, []);
   useEffect(() => {
     setLoadContent(false);
     setTimeout(() => {
       setLoadContent(true);
-    }, 2900);
+    }, 0);
   }, []);
 
   return (
@@ -43,7 +43,7 @@ function App() {
               ease: [1, 0.71, 0.2, 1.01],
             }}
           >
-            <Intro />
+            {/* <Intro /> */}
           </motion.div>
         )}
       </AnimatePresence>
@@ -62,7 +62,6 @@ function App() {
             <Navbar />
             <Home />
             <Content />
-            <GoToTop />
             <Footer />
           </motion.div>
         )}

@@ -29,7 +29,8 @@ function Navbar() {
   ];
   return (
     <>
-      <div
+    
+      <div 
         className={`flex justify-between items-center  ${
           !show && "bg-transparent"
         } ${
@@ -39,12 +40,12 @@ function Navbar() {
         <div className="flex justify-between w-full md:w-auto">
           <img src={logo} alt="loading" className="h-16 p-1.5 md:h-20 md:p-2" />{" "}
           <div className="flex md:hidden">
-            <Sidebar />{" "}
+            <Sidebar className="topLinksMobile"/>{" "}
           </div>
         </div>
         <div className="hidden md:block">
           <div className="flex-column mr-10 text-white font-bold ">
-            <ul className="hidden md:flex pr-11">
+            <ul className="hidden md:flex pr-11 topLinks">
               {EventLinks.map((EventLinks) => (
                 <a href={EventLinks.Link}>
                   <div className="flex items-center">

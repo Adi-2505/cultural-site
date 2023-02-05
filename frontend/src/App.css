@@ -3,6 +3,7 @@
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
 
+    /* width: 100%; */
 }
 
 html::-webkit-scrollbar {
@@ -46,7 +47,7 @@ html::-webkit-scrollbar-thumb:active {
     background-color: rgba(0, 0, 0, .7);
     color: #fff;
 
-
+    
 }
 
 .navitems {
@@ -117,7 +118,7 @@ html::-webkit-scrollbar-thumb:active {
     flex-wrap: wrap;
 
 
-
+                                  
 }
 
 .item1 {
@@ -302,7 +303,7 @@ html::-webkit-scrollbar-thumb:active {
 /* footer css here */
 footer {
     /* background-color: black; */
-    background-image: linear-gradient(to bottom left, #5e045e, #0b000f);
+    background-image: linear-gradient(to bottom left, #5e045e, rgb(11, 0, 15));
 
     width: 100% !important;
     position: absolute !important;
@@ -484,8 +485,8 @@ footer {
 
 .scrollTop {
     /* position: fixed; */
-    background-image: linear-gradient(to bottom left, #4d044d, #430443);
-
+    /* background-image: linear-gradient(#5e045e, #5e045e); */
+    /* background-color: #5e045e; */
     width: 100%;
     bottom: 20px;
     align-items: center;
@@ -500,9 +501,9 @@ footer {
 
 }
 
-.scrollTop:hover {
+/* .scrollTop:hover {
     opacity: 1;
-}
+} */
 
 @keyframes fadeIn {
     0% {
@@ -511,5 +512,127 @@ footer {
 
     100% {
         opacity: 1;
+    }
+}
+
+
+
+
+/* nayi wali css hai ye, ab nahi badlunga isko */
+.photoSmallKaro
+{
+    padding-right: 50px;
+    width: 400px;
+    height: 400px;
+}
+
+@media only screen and (max-width:870px)
+{
+    /* .topLinks
+    {
+        display: none;
+    }
+    .topLinksMobile
+    {
+        display: none;
+    } */
+    .iskoHatao
+    {
+        display: none;
+    }
+    /* .photoSmallKaro
+    {
+        max-width: 150px;
+        height: 50px;
+        justify-content: center;
+        
+    } */
+    .aboutUsText
+    {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width:825px)
+{
+    .photoSmallKaro
+    {
+        /* width: 50%; */
+        width: 240px;
+        height: 100px;
+        /* justify-content: center; */
+        margin-top: 60px;
+        
+    }
+    .content1
+    {
+        /* width: 50%; */
+        font-size: 12px;
+        /* padding: 0px; */
+    }
+    #about
+    {
+        /* margin-top: 10px; */
+        /* padding-top: 20px; */
+        flex-wrap: nowrap;
+    }
+}
+.newClass4
+    {
+        text-align: right;
+    }
+@media only screen and (max-width:800px)
+{
+    .content1
+    {
+        /* width: 50%; */
+        font-size: 10px;
+        line-height: 14px;
+        /* padding: 0px; */
+    }
+    .photoSmallKaro
+    {
+        /* width: 50%; */
+        margin-top: 30px;
+        width: 160px;
+        height: 160px;
+        padding-right: 20px;
+        /* justify-content: center; */
+        
+    }
+    .newClass
+    {
+        padding-left: 15px;
+        padding-top: 5px;
+        padding-right: 5px;
+    }
+    .newClass2
+    {
+        font-size: 20px;
+    }
+    .newClass3
+    {
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-left: 5px;
+    }
+    .newClass4
+    {
+        text-align: right;
+    }
+    .sponsor
+    {
+        font-size: 35px;
+    }
+    .sponsornote
+    {
+        margin-top: 10px;
+        padding-top:10px;
+        padding-bottom: 10px;
+    }
+    .sponsornote2
+    {
+        font-size: 15px;
+        margin: 2px;
     }
 }
