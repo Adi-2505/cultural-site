@@ -30,7 +30,7 @@ const GoToTop = () => {
 
         <div>
 
-            <div className="scrollTop" onClick={scrollTop} style={{fontSize:30, color: 'white', backgroundColor: 'black', height: 40, display: 'flex',alignItems: 'center', justifycontent: 'center', cursor: 'pointer',}} >
+            <div className="scrollTop" onClick={scrollTop} style={{fontSize:30, color: 'white',  height: 40, display: 'flex',alignItems: 'center', justifycontent: 'center', cursor: 'pointer',}} >
                 BACK TO TOP
             </div>
         </div>

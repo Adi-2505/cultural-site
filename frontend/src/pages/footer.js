@@ -1,16 +1,18 @@
 import React from "react";
 import logo1 from "../images/footer-img/logo_cacs.png";
 import logo2 from "../images/footer-img/logo_iiit_kota.png";
-import navIcon1 from "../images/footer-img/nav-icon1.svg";
 import navIcon2 from "../images/footer-img/nav-icon2.svg";
 import navIcon3 from "../images/footer-img/nav-icon3.svg";
 import navIcon4 from "../images/footer-img/nav-icon4.svg";
+import GoToTop from "../components/GoToTop";
+
 
 function Footer() {
   const mapSrc =
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.2422238719732!2d75.80860731504391!3d26.864044283148562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db6776320d101%3A0xea3495775ef99a25!2sIndian%20Institute%20of%20Information%20Technology%2C%20Kota!5e0!3m2!1sen!2sin!4v1673149372293!5m2!1sen!2sin";
   return (
     <footer className="footer">
+      <GoToTop/>
       <div className="flex-container ">
         <div className="flex-item-left">
           <div className="px-5 footer-content">
