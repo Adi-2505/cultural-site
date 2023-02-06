@@ -15,19 +15,21 @@ function Home() {
         >
           <source src={Video} type="video/mp4" />
         </video>
-        <motion.div className="homepage-centerlogo">
-          <img src={centerlogo} alt="loading" />
-        </motion.div>
-        <motion.div
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ stiffness: 50 }}
-          className="homepage-button transition lowbutton"
-          style={{ width: '250px', height:'40px', display: 'inline-block' }}
-        >
-          <a href="https://forms.gle/rPWyjMokeTpiAjCZA"
-            target="__blank">PRE REGISTER</a>
-        </motion.div>
+        <div className="home-center">
+          <motion.div className="home-centerlogo">
+            <img src={centerlogo} alt="loading" />
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition={{ stiffness: 50 }}
+            className="homepage-button transition lowbutton"
+          >
+            <a href="https://forms.gle/rPWyjMokeTpiAjCZA" target="__blank">
+              PRE REGISTER
+            </a>
+          </motion.div>
+        </div>
       </div>
     </>
   );
