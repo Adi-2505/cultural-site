@@ -46,9 +46,9 @@ function Footer() {
                   team@flairfiesta.in <br />
                   cacs@iiitkota.ac.in <br />
                   +91 9808455106 (CACS President) <br />
-                  +91 9808455106 (CACS Vice-President) <br />
-                  +91 9808455106 (CACS General Seceratory) <br />
-                  +91 9808455106 (CACS Technical Seceratory) <br />
+                  +91 9660728966 (CACS Vice-President) <br />
+                  +91 7993447183 (CACS General Seceratory) <br />
+                  +91 9826623499 (CACS Public Relational Seceratory) <br />
                 </p>
               </div>
   
