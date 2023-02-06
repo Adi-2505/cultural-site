@@ -57,21 +57,33 @@ html::-webkit-scrollbar-thumb:active {
     font-size: 20px;
     line-height: 150%;
 }
-
+.home-center{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    top: 30vh;
+}
+.home-centerlogo{
+    width: 100%;
+    height: 50vh;
+}
+.home-centerlogo img{
+  height: 100%;
+  margin: 0 auto;
+}
 .homepage-button {
     display: flex;
-    position: absolute;
-    top: 75%;
-    left: 45%;
+    flex-wrap: wrap;
+    margin: 0 auto;
     align-items: center;
     border-radius: 70px;
     background-color: #F7FF92;
     border: 1px solid #F7FF92;
+    padding: 1.05rem 1.4rem;
     color: black;
-    font-size: 1.4rem;
-    padding: 0 50px;
-    width: 200px;
-    height: 70px;
     font-weight: bold;
 }
 
@@ -85,15 +97,11 @@ html::-webkit-scrollbar-thumb:active {
 
 .homepage-centerlogo {
 
-    position: absolute;
-    align-items: center;
-    top: 25%;
-    left: 30%;
 
 }
 
 .homepage-centerlogo img {
-    height: 400px;
+    
 }
 
 /*  end fest name and date homepage */
@@ -438,41 +446,11 @@ footer {
         flex-direction: column;
     }
 
-    .homepage-centerlogo {
-        align-items: center;
-        position: absolute;
-        top: 190px;
-        left: 100px;
-    }
-
-    .homepage-centerlogo img {
-        height: 250px;
-        width: 400px;
-    }
-
-    .homepage-button {
-        top: 70%;
-        left: 180px;
-    }
+  
 }
 
 @media (max-width: 480px) {
-    .homepage-centerlogo {
-        align-items: center;
-        position: absolute;
-        top: 230px;
-        left: 50px;
-    }
-
-    .homepage-centerlogo img {
-        height: 200px;
-        width: 330px;
-    }
-
-    .homepage-button {
-        top: 70%;
-        left: 100px;
-    }
+    
 }
 
 
