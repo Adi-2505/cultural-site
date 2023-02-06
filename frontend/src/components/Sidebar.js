@@ -16,7 +16,7 @@ function Sidebar() {
     { Event: "HOME", Link: "/", Icon: HiHome },
     { Event: "ABOUT", Link: "#About", Icon: HiDocumentText },
     { Event: "SCHEDULE", Link: "#Schedule", Icon: HiCalendar },
-    { Event: "SPONSORS US", Link: "#Sponsor", Icon: HiHeart },
+    { Event: "JOIN US", Link: "#Sponsor", Icon: HiHeart },
   ];
 
   return (
@@ -46,7 +46,8 @@ function Sidebar() {
           ))}
         </ul>
         <button className="d-flex align-items-left m-58em p-2 rounded uppercase navbarbutton navitems transition duration-500">
-          PRE-Register
+        <a href="https://forms.gle/rPWyjMokeTpiAjCZA"
+            target="__blank">PRE REGISTER</a>
         </button>
       </div>
     </>

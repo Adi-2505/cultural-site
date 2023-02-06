@@ -25,7 +25,7 @@ function Navbar() {
     { Event: "HOME", Link: "", icon: HiHome },
     { Event: "ABOUT", Link: "#About", icon: HiDocumentText },
     { Event: "SCHEDULE", Link: "#Schedule", icon: HiCalendar },
-    { Event: "SPONSORS US", Link: "#Sponsor", icon: HiHeart },
+    { Event: "SPONSOR US", Link: "#Sponsor", icon: HiHeart },
   ];
   return (
     <>
@@ -56,7 +56,10 @@ function Navbar() {
                 </a>
               ))}
               <button className="p-2 rounded m-1 uppercase navbarbutton navitems transition duration-500">
-                PRE-Register
+                <a href="https://forms.gle/rPWyjMokeTpiAjCZA"
+            target="__blank">
+                PRE REGISTER
+                </a>
               </button>
             </ul>
           </div>

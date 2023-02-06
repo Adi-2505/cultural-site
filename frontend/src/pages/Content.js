@@ -45,7 +45,6 @@ function Content() {
 
 
         <section id="Schedule">
-
           <div class="p-14 grid grid-rows-3 grid-flow-col gap-4 newClass3" style={{ color: "white" }}>
             <div class="row-span-3 ...">
               <div className="flex-item-left grid items-center justify-center photoSmallKaro">
@@ -63,11 +62,14 @@ function Content() {
 
             <div class="row-span-3 ...">
               <div className="aboutUsText">
-                <div className="flex-item-right grid items-center text-xl font-medium text-white newClass2"
-
-                  
+              <div className="text-xl font-medium text-white content newClass2"
+                  style={{
+                    textAlign: "right",
+                    paddingBottom: "15px",
+                    fontSize: "30px",
+                  }}
                 >
-                  <div className="newClass4">SCHEDULE</div>
+                 <div className="newClass2"> SCHEDULE </div>
                 </div>
                 <p className="text-slate-500 content2 content1">
                   Mark your calanders for an exciting event! The Flair Fiesta
@@ -83,14 +85,8 @@ function Content() {
                 </p>
               </div>
             </div>
-
-
           </div>
-
-
-
         </section>
-
         <section id="Sponsor">
           <div>
             <h1 className="sponsor" style={{ color: "white" }}>
@@ -105,19 +101,20 @@ function Content() {
               audience of over 10000+ foot fall
             </p>
           </div>
-
-          <motion.div
+        </section>
+        <br/>
+        <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            transition={{ stiffness: 50 }}
+            transition={{ type: 'string', stiffness: 1 }}
             className="sponsor-button transition lowbutton"
           >
             <a className="newbutton" href="https://forms.gle/MbANvMWjVBxmaQcYA"
               target="__blank">
-              Sponsor
+              Join Us
             </a>
           </motion.div>
-        </section>
+          <br/>
       </div>
     </>
   );

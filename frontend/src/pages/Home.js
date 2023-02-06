@@ -22,7 +22,7 @@ function Home() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           transition={{ stiffness: 50 }}
-          className="homepage-button transition duration-1000"
+          className="homepage-button transition lowbutton"
           style={{ width: '250px', height:'40px', display: 'inline-block' }}
         >
           <a href="https://forms.gle/rPWyjMokeTpiAjCZA"
