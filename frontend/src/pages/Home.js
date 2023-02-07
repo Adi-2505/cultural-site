@@ -22,10 +22,10 @@ function Home() {
           <motion.div
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            transition={{ stiffness: 50 }}
+            transition={{ type: "string", stiffness: 1 }}
             className="homepage-button transition lowbutton"
           >
-            <a  href="https://forms.gle/rPWyjMokeTpiAjCZA" target="__blank">
+            <a className="preRegister_btn"href="https://forms.gle/rPWyjMokeTpiAjCZA" target="__blank">
               PRE REGISTER
             </a>
           </motion.div>
