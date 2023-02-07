@@ -90,7 +90,7 @@ html::-webkit-scrollbar-thumb:active {
 .homepage-button:hover {
     cursor: pointer;
     font-weight: bolder;
-    background: rgb(191, 212, 54);
+    /* background: rgb(191, 212, 54); */
     border: none;
     color: #353803;
 }
@@ -297,7 +297,7 @@ html::-webkit-scrollbar-thumb:active {
     align-items: center;
     cursor: pointer;
     padding: 0 50px;
-
+    font-size: 20px;
 
 }
 
@@ -522,7 +522,8 @@ footer {
 /* nayi wali css hai ye, ab nahi badlunga isko */
 .photoSmallKaro
 {
-    padding-right: 50px;
+    margin-top: -80px;
+    padding-right: 60px;
     width: 400px;
     height: 400px;
 }
@@ -603,9 +604,10 @@ footer {
     }
     .newClass
     {
-        padding-left: 15px;
+        padding-left: 10%;
         padding-top: 5px;
         padding-right: 5px;
+        /* paddingLeft:"110px"  */
     }
     .newClass2
     {

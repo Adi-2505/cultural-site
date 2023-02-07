@@ -25,7 +25,7 @@ function Home() {
             transition={{ stiffness: 50 }}
             className="homepage-button transition lowbutton"
           >
-            <a href="https://forms.gle/rPWyjMokeTpiAjCZA" target="__blank">
+            <a  href="https://forms.gle/rPWyjMokeTpiAjCZA" target="__blank">
               PRE REGISTER
             </a>
           </motion.div>

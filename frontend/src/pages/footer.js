@@ -26,8 +26,9 @@ function Footer() {
                   PRESIDING OVER ALL THE CLUBS <br /> OF THE INSTITUTE
                 </p>
               </div>
-              <div>
-                <div className="text-xl font-medium text-white">ADDRESS</div>
+              
+              <div  style={{marginLeft:'70px'}}>
+                <div className="text-xl font-medium text-white ">ADDRESS</div>
                 <p className="text-slate-500">
                   2nd floor, Prabha Bhavan, <br />
                   MNIT campus, JLN Marg, <br />

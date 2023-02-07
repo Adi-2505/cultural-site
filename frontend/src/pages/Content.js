@@ -8,7 +8,7 @@ function Content() {
     <>
       <div className="mainContent">
         <section id="About">
-          <div class="p-14 grid grid-rows-3 grid-flow-col gap-4 newClass" style={{ color: "white" }}>
+          <div class="p-14 grid grid-rows-3 grid-flow-col gap-4 newClass" style={{ color: "white", }}>
             <div class="row-span-3 ...">
               <div className="aboutUsText">
                 <div className="text-xl font-medium text-white content newClass2"
