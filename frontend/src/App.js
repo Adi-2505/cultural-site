@@ -19,13 +19,13 @@ function App() {
     setLoads(true);
     setTimeout(() => {
       setLoads(false);
-    }, 0);
+    }, 3100);
   }, []);
   useEffect(() => {
     setLoadContent(false);
     setTimeout(() => {
       setLoadContent(true);
-    }, 0);
+    }, 2600);
   }, []);
 
   return (
@@ -43,7 +43,7 @@ function App() {
               ease: [1, 0.71, 0.2, 1.01],
             }}
           >
-            {/* <Intro /> */}
+            <Intro />
           </motion.div>
         )}
       </AnimatePresence>
