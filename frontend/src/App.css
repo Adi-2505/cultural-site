@@ -724,6 +724,16 @@ footer {
         font-size: 15px;
         margin: 2px;
     }
+    .newbutton
+    {
+        /* padding-left: 60px;
+        padding-right: 60px; */
+        /* text-align: left; */
+        /* align-self: center; */
+        /* display: inline-block; */
+        /* clear: both; */
+        white-space: nowrap;
+    }
 }
 
 @media only screen and (max-width:533px) {
@@ -762,5 +772,19 @@ footer {
         margin-top: 30%;
         justify-content: center;
 
+    }
+    .newbutton
+    {
+        /* padding-left: 60px;
+        padding-right: 60px; */
+        /* text-align: left; */
+        /* align-self: center; */
+        /* display: inline-block; */
+        /* clear: both; */
+        white-space: nowrap;
+    }
+    .facebookIcon
+    {
+        margin-bottom: 15px
     }
 }
