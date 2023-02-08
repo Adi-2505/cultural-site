@@ -70,7 +70,7 @@ function Footer() {
         </div>
         <div className="grid justify-items-end">
           <div className="social-icon ">
-            <a href="https://www.facebook.com/iiitkfd">
+            <a className="facebookIcon" href="https://www.facebook.com/iiitkfd">
               <img src={navIcon2} alt="Icon" />
             </a>
             <a
