@@ -37,7 +37,7 @@ function Navbar() {
           show && "navscroll"
         } fixed top-0 w-full z-10 transition duration-1000`}
       >
-        <div className="flex justify-between w-full md:w-auto">
+        <div className="flex justify-between w-full md:w-auto mx-3">
           <img src={logo} alt="loading" className="h-16 p-1.5 md:h-20 md:p-2" />{" "}
           <div className="flex md:hidden">
             <Sidebar className="topLinksMobile"/>{" "}
