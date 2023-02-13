@@ -26,7 +26,7 @@ function Sidebar() {
       <div
         className={
           nav
-            ? "fixed z-20 left-0 h-full w-1/2 sm:w-1/3  text-white font-bold bg-gradient-to-tl from-white/10 to-[#030003] border-r-black-900 ease-in-out duration-500"
+            ? "fixed z-20 left-0 h-full w-1/2 sm:w-1/3  text-white font-bold  bg-[#030003] border-r-black-900 ease-in-out duration-500"
             : "fixed left-[-100%]"
         }
       >
