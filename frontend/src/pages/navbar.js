@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [show, handleshow] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -23,11 +24,17 @@ function Navbar() {
     };
   }, []);
 
+  function toggleDropdown() {
+    setIsOpen(!isOpen);
+  }
+
   const EventLinks = [
+
     // { Event: "HOME", Link: "/", icon: HiHome },
     { Event: "ABOUT", Link: "./#About", icon: HiDocumentText },
     { Event: "SCHEDULE", Link: "#Schedule", icon: HiCalendar },
-    { Event: "SPONSOR US", Link: "#Sponsor", icon: HiHeart },
+    //{ Event: "SPONSOR US", Link: "/sponsor", icon: HiHeart },
+
   ];
   return (
     <>
@@ -38,8 +45,12 @@ function Navbar() {
           show && "navscroll"
         } fixed top-0 w-full z-10 transition duration-1000`}
       >
-        <div className="flex justify-between w-full md:w-auto mx-3">
-          <img src={logo} alt="loading" className="h-16 p-1.5 md:h-20 md:p-2" />{" "}
+        <div className="flex justify-between w-full md:w-auto">
+          <img
+            src={logo}
+            alt="loading"
+            className="h-16 ml-5 p-1.5 md:h-20 md:p-2"
+          />{" "}
           <div className="flex md:hidden">
             <Sidebar className="topLinksMobile" />{" "}
           </div>
@@ -64,8 +75,20 @@ function Navbar() {
                 </>
               ))}
 
+                <div className="flex items-center relative">
+                  <button className="flex-1 p-3  ml-2 mr-2 navitems"  onClick={toggleDropdown}>
+                    SPONSOR
+                  </button>
+                  {isOpen && (
+                    <ul className="absolute w-full top-12 left-5">
+                     <a href="/sponsor" onClick={toggleDropdown}><li className="navitems">SPONSORS</li></a> 
+                     <a href="/#Sponsor" onClick={toggleDropdown}> <li className="navitems">SPONSOR US</li></a>
+                    </ul>
+                  )}
+                </div>
               <button className="p-2 rounded m-1 uppercase navbarbutton navitems transition duration-500">
-                <Link to="/register">PRE REGISTER</Link>
+               <Link to="/register">PRE REGISTER</Link>
+
               </button>
             </ul>
           </div>

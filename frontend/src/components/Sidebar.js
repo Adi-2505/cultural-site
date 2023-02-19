@@ -3,6 +3,9 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { HiHome, HiCalendar, HiDocumentText, HiHeart } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
+
+import {TbHeartHandshake} from "react-icons/tb";
+
 function Sidebar() {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
@@ -10,9 +13,10 @@ function Sidebar() {
   };
   const EventLinks = [
     { Event: "HOME", Link: "/", Icon: HiHome },
-    { Event: "ABOUT", Link: "#About", Icon: HiDocumentText },
-    { Event: "SCHEDULE", Link: "#Schedule", Icon: HiCalendar },
-    { Event: "JOIN US", Link: "#Sponsor", Icon: HiHeart },
+    { Event: "ABOUT", Link: "/#About", Icon: HiDocumentText },
+    { Event: "SCHEDULE", Link: "/#Schedule", Icon: HiCalendar },
+    { Event: "SPONSORS", Link: "/sponsor", Icon: HiHeart },
+    { Event: "SPONSOR US", Link: "/#Sponsor", Icon: TbHeartHandshake },
   ];
 
   return (
@@ -27,7 +31,7 @@ function Sidebar() {
       <div
         className={
           nav
-            ? "fixed z-20 left-0 h-full w-1/2 sm:w-1/3  text-white font-bold  bg-[#030003] border-r-black-900 ease-in-out duration-500"
+            ? "fixed z-20 left-0 h-full w-1/2 sm:w-1/3  text-white font-bold bg-gradient-to-tl from-white/10 to-[#030003] border-r-black-900 ease-in-out duration-500"
             : "fixed left-[-100%]"
         }
       >

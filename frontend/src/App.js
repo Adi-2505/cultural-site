@@ -1,15 +1,15 @@
 import "./App.css";
 import Navbar from "./pages/navbar";
 import Footer from "./pages/footer";
-
 import Home from "./pages/Home";
 // import GoToTop from "./components/GoToTop";
 import Content from "./pages/Content";
-
 import Intro from "./components/Intro.js";
-
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Sponsor from "./pages/Sponsor";
 
 import {
   // BrowserRouter, //react contexts hook!
@@ -36,8 +36,27 @@ function App() {
       setLoadContent(true);
     }, 2600);
   }, []);
-
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <>
+          <Home />
+          <Content />
+        </>
+      ),
+    },
+    {
+      path: "/sponsor",
+      element: (
+        <>
+          <Sponsor />
+        </>
+      ),
+    },
+  ]);
   return (
+
     <div className="App">
       <AnimatePresence>
         {loads && (
@@ -69,7 +88,7 @@ function App() {
             }}
           >
             <Navbar />
-
+  {/*<RouterProvider router={router} /> */}
             <Routes>
               <Route
                 exact
@@ -97,6 +116,7 @@ function App() {
         )}
       </AnimatePresence>
     </div>
+
   );
 }
 
