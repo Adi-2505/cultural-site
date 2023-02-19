@@ -22,10 +22,10 @@ function Navbar() {
   }, []);
 
   const EventLinks = [
-    { Event: "HOME", Link: "", icon: HiHome },
+    { Event: "HOME", Link: "/", icon: HiHome },
     { Event: "ABOUT", Link: "#About", icon: HiDocumentText },
     { Event: "SCHEDULE", Link: "#Schedule", icon: HiCalendar },
-    { Event: "SPONSOR US", Link: "#Sponsor", icon: HiHeart },
+    { Event: "SPONSOR US", Link: "/sponsor", icon: HiHeart },
   ];
   return (
     <>

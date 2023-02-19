@@ -102,12 +102,47 @@ html::-webkit-scrollbar-thumb:active {
     color: #353803;
 }
 
-.homepage-centerlogo {}
-
-.homepage-centerlogo img {}
 
 /*  end fest name and date homepage */
 
+/* Sponsor Page start here */
+
+.sponsorpage {
+    height: 127vh;
+    background-image: url(./images/bg-sponsors.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-top: 12vh;
+}
+
+.sponsorpage>h1 {
+    width: full;
+    display: flex;
+    justify-content: space-around;
+    font-size: 3.5rem;
+    color: #F7FF94;
+    font-weight: 900;
+    font-family: 'Barlow';
+    font-style: normal;
+    line-height: 114px;
+}
+.sponsorpage>div{
+    height: 30vh;
+}
+.sponsorpage>div>h3 {
+    width: full; 
+    display: flex;
+    justify-content: space-around;
+    line-height: 54px;
+    font-size: 2rem;
+    color: #F0F4F0;
+    font-weight: 900;
+    font-family: 'Barlow';
+    font-style: normal; 
+}
+
+/* Sponsor Page End here */
 
 /* content css here */
 
@@ -269,11 +304,15 @@ html::-webkit-scrollbar-thumb:active {
 
     }
 
+  /* Sponsor page */
+  .sponsorpage>h1 {
+    font-size: 2.3rem;
+}
 
-    /* .newbutton
-    {
-        font-size: 20px;
-    } */
+.sponsorpage>div>h3 {
+    font-size: 1.4rem;
+}
+  /* Sponsor page end */
 }
 
 
@@ -724,8 +763,8 @@ footer {
         font-size: 15px;
         margin: 2px;
     }
-    .newbutton
-    {
+
+    .newbutton {
         /* padding-left: 60px;
         padding-right: 60px; */
         /* text-align: left; */
@@ -773,8 +812,8 @@ footer {
         justify-content: center;
 
     }
-    .newbutton
-    {
+
+    .newbutton {
         /* padding-left: 60px;
         padding-right: 60px; */
         /* text-align: left; */
@@ -783,8 +822,8 @@ footer {
         /* clear: both; */
         white-space: nowrap;
     }
-    .facebookIcon
-    {
+
+    .facebookIcon {
         margin-bottom: 15px
     }
 }
