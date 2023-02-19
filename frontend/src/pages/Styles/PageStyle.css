@@ -1,0 +1,283 @@
+/* Register page css */
+
+.register {
+    position: relative;
+    width: 1728px;
+    width: 100%;
+    height: 870px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-size: 100%;
+    /* height: 100%; */
+    /* background-position: 100%; */
+}
+
+.register_dialog {
+    position: absolute;
+    display: inline-grid;
+    width: 471px;
+    height: 510px;
+    left: 37%;
+    top: 14%;
+    background: rgba(5, 1, 23, 0.88);
+    border-radius: 20px;
+    align-items: center;
+    /* padding-left: 2%;
+    padding-top: 2%; */
+    text-align: center;
+}
+
+.register_input2 {
+    display: inline-block;
+    width: 361px;
+    height: 41px;
+    align-items: center;
+    text-align: center;
+
+    letter-spacing: 2px;
+
+    margin-top: 9px;
+    background: #ffffff;
+    opacity: 0.6;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    font-size: medium;
+
+    color: #000000;
+}
+
+.submit_reg_detail {
+    width: 148px;
+    height: 48px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background: #41004c;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.loginText {
+    color: #ffffff;
+    /* width: 354px; */
+    height: 27px;
+    font-size: 24px;
+
+
+}
+
+.img_reg {
+    background-image: url("../../images/bg-login.jpg");
+
+}
+
+@media only screen and (max-width: 1036px) {
+    .register_dialog {
+        width: 400px;
+        height: 450px;
+        left: 30%;
+        top: 20%;
+    }
+
+    .register_input2 {
+        width: 311px;
+        height: 41px;
+        font-size: medium;
+
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .register {
+        width: 100%;
+        /* height: 900px; */
+    }
+
+    .register_dialog {
+        width: 400px;
+        height: 450px;
+        left: 22%;
+        top: 10%;
+    }
+
+    .register_input2 {
+        width: 320px;
+        font-size: medium;
+
+        height: 41px;
+
+    }
+}
+
+@media only screen and (max-width: 635px) {
+    .register {
+        width: 100%;
+        /* height: 680px; */
+    }
+
+    .register_dialog {
+        width: 360px;
+        height: 450px;
+        left: 20%;
+        top: 20%;
+    }
+
+    .register_input2 {
+        width: 260px;
+        height: 41px;
+        align-items: center;
+        text-align: center;
+
+        letter-spacing: 2px;
+        font-size: medium;
+
+
+        border-radius: 10px;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    .register {
+        width: 100%;
+        /* height: 680px; */
+    }
+
+    .register_dialog {
+        width: 300px;
+        height: 380px;
+        /* left: 22%; */
+        top: 20%;
+    }
+
+    .register_input2 {
+        width: 220px;
+        height: 28px;
+        letter-spacing: 2px;
+
+        border-radius: 10px;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 100;
+        font-size: 11px;
+        font-size: medium;
+
+    }
+
+    .submit_reg_detail {
+        width: 100px;
+        height: 48px;
+    }
+
+    .loginText {
+        color: #ffffff;
+        width: 100%;
+        height: 48px;
+        font-size: 15px;
+
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .register {
+        width: 100%;
+        /* height: 680px; */
+    }
+
+    .register_dialog {
+        width: 270px;
+        height: 380px;
+        left: 22%;
+        top: 20%;
+    }
+
+    .register_input2 {
+        width: 170px;
+        height: 28px;
+        letter-spacing: 2px;
+
+        border-radius: 10px;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 100;
+        font-size: 11px;
+        font-size: medium;
+
+    }
+
+    .submit_reg_detail {
+        width: 100px;
+        height: 48px;
+    }
+
+    .loginText {
+        color: #ffffff;
+        width: 100%;
+        height: 48px;
+        font-size: 15px;
+
+    }
+}
+
+@media only screen and (max-width: 414px) {
+
+
+    .register_dialog {
+        width: 310px;
+        height: 380px;
+        left: 10%;
+        top: 20%;
+    }
+
+    .register_input2 {
+        width: 230px;
+        height: 27px;
+        font-size: medium;
+
+    }
+
+    .register {
+        width: 100%;
+        height: 1000px;
+        font-weight: 200;
+    }
+
+
+
+}
+
+.register_input2::placeholder {
+    color: black;
+    font-weight: 200;
+    font-size: medium;
+    opacity: 1;
+}
+
+.visible_input {
+    visibility: visible;
+}
+
+.hidden_input {
+    visibility: hidden;
+    transition: opacity 0.6s linear;
+
+}

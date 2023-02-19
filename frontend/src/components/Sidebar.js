@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { HiHome, HiCalendar, HiDocumentText, HiHeart } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 function Sidebar() {
   const [nav, setNav] = useState(false);
@@ -8,7 +9,7 @@ function Sidebar() {
     setNav(!nav);
   };
   const EventLinks = [
-    { Event: "HOME", Link: "#", Icon: HiHome },
+    { Event: "HOME", Link: "/", Icon: HiHome },
     { Event: "ABOUT", Link: "#About", Icon: HiDocumentText },
     { Event: "SCHEDULE", Link: "#Schedule", Icon: HiCalendar },
     { Event: "JOIN US", Link: "#Sponsor", Icon: HiHeart },
@@ -32,20 +33,21 @@ function Sidebar() {
       >
         <ul className="pt-24">
           {EventLinks.map((EventLinks) => (
-            <a href={EventLinks.Link}>
+            <Link to={EventLinks.Link}>
               <div className="flex items-center border-b border-gray-600">
                 <EventLinks.Icon className="h-4 flex-1" />
                 <li className="flex-1  p-2 " onClick={handleNav}>
                   {EventLinks.Event}
                 </li>
               </div>
-            </a>
+            </Link>
           ))}
         </ul>
-        <button onClick={handleNav} className="flex items-center ml-8 p-2 rounded uppercase navbarbutton navitems transition duration-500">
-          <a href="https://forms.gle/rPWyjMokeTpiAjCZA" target="__blank">
-            PRE REGISTER
-          </a>
+        <button
+          onClick={handleNav}
+          className="flex items-center ml-8 p-2 rounded uppercase navbarbutton navitems transition duration-500"
+        >
+          <Link to="/register">PRE REGISTER</Link>
         </button>
       </div>
     </>

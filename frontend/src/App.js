@@ -11,6 +11,14 @@ import Intro from "./components/Intro.js";
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
+import {
+  // BrowserRouter, //react contexts hook!
+  Routes,
+  Route,
+  //   Link
+} from "react-router-dom";
+import Register from "./pages/Register";
+
 function App() {
   const [loads, setLoads] = useState(false);
   const [loadContent, setLoadContent] = useState(false);
@@ -21,6 +29,7 @@ function App() {
       setLoads(false);
     }, 3100);
   }, []);
+
   useEffect(() => {
     setLoadContent(false);
     setTimeout(() => {
@@ -40,7 +49,7 @@ function App() {
             transition={{
               duration: 1,
               delay: 0.5,
-              ease: [1, 0.71, 0.2, 1.01],
+              ease: [1, 0.71, 0.2, 1],
             }}
           >
             <Intro />
@@ -60,9 +69,30 @@ function App() {
             }}
           >
             <Navbar />
-            <Home />
-            <Content />
-            <Footer />
+
+            <Routes>
+              <Route
+                exact
+                path="/"
+                element={
+                  <>
+                    <Home />
+                    <Content />
+                    <Footer />
+                  </>
+                }
+              />
+              <Route
+                exact
+                path="/register"
+                element={
+                  <>
+                    <Register />
+                    {/* <Content /> */}
+                  </>
+                }
+              />
+            </Routes>
           </motion.div>
         )}
       </AnimatePresence>
