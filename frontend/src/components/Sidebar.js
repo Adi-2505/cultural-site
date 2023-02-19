@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { HiHome, HiCalendar, HiDocumentText, HiHeart } from "react-icons/hi";
-
+import {TbHeartHandshake} from "react-icons/tb";
 function Sidebar() {
   const [nav, setNav] = useState(false);
   const handleNav = () => {
@@ -11,7 +11,8 @@ function Sidebar() {
     { Event: "HOME", Link: "/", Icon: HiHome },
     { Event: "ABOUT", Link: "/#About", Icon: HiDocumentText },
     { Event: "SCHEDULE", Link: "/#Schedule", Icon: HiCalendar },
-    { Event: "JOIN US", Link: "/sponsor", Icon: HiHeart },
+    { Event: "SPONSORS", Link: "/sponsor", Icon: HiHeart },
+    { Event: "SPONSOR US", Link: "/#Sponsor", Icon: TbHeartHandshake },
   ];
 
   return (

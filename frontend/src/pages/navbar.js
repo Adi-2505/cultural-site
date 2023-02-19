@@ -5,6 +5,7 @@ import { HiHome, HiCalendar, HiDocumentText, HiHeart } from "react-icons/hi";
 
 function Navbar() {
   const [show, handleshow] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -21,16 +22,19 @@ function Navbar() {
     };
   }, []);
 
+  function toggleDropdown() {
+    setIsOpen(!isOpen);
+  }
+
   const EventLinks = [
     { Event: "HOME", Link: "/", icon: HiHome },
     { Event: "ABOUT", Link: "/#About", icon: HiDocumentText },
     { Event: "SCHEDULE", Link: "/#Schedule", icon: HiCalendar },
-    { Event: "SPONSOR US", Link: "/sponsor", icon: HiHeart },
+    // { Event: "SPONSOR US", Link: "/sponsor", icon: HiHeart },
   ];
   return (
     <>
-    
-      <div 
+      <div
         className={`flex justify-between items-center  ${
           !show && "bg-transparent"
         } ${
@@ -38,9 +42,13 @@ function Navbar() {
         } fixed top-0 w-full z-10 transition duration-1000`}
       >
         <div className="flex justify-between w-full md:w-auto">
-          <img src={logo} alt="loading" className="h-16 ml-5 p-1.5 md:h-20 md:p-2" />{" "}
+          <img
+            src={logo}
+            alt="loading"
+            className="h-16 ml-5 p-1.5 md:h-20 md:p-2"
+          />{" "}
           <div className="flex md:hidden">
-            <Sidebar className="topLinksMobile"/>{" "}
+            <Sidebar className="topLinksMobile" />{" "}
           </div>
         </div>
         <div className="hidden md:block">
@@ -55,10 +63,20 @@ function Navbar() {
                   </div>
                 </a>
               ))}
+                <div className="flex items-center relative">
+                  <button className="flex-1 p-3  ml-2 mr-2 navitems"  onClick={toggleDropdown}>
+                    SPONSOR
+                  </button>
+                  {isOpen && (
+                    <ul className="absolute w-full top-12 left-5">
+                     <a href="/sponsor" onClick={toggleDropdown}><li className="navitems">SPONSORS</li></a> 
+                     <a href="/#Sponsor" onClick={toggleDropdown}> <li className="navitems">SPONSOR US</li></a>
+                    </ul>
+                  )}
+                </div>
               <button className="p-2 rounded m-1 uppercase navbarbutton navitems transition duration-500">
-                <a href="https://forms.gle/rPWyjMokeTpiAjCZA"
-            target="__blank">
-                PRE REGISTER
+                <a href="https://forms.gle/rPWyjMokeTpiAjCZA" target="__blank">
+                  PRE REGISTER
                 </a>
               </button>
             </ul>
