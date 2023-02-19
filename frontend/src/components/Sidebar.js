@@ -8,10 +8,10 @@ function Sidebar() {
     setNav(!nav);
   };
   const EventLinks = [
-    { Event: "HOME", Link: "#", Icon: HiHome },
-    { Event: "ABOUT", Link: "#About", Icon: HiDocumentText },
-    { Event: "SCHEDULE", Link: "#Schedule", Icon: HiCalendar },
-    { Event: "JOIN US", Link: "#Sponsor", Icon: HiHeart },
+    { Event: "HOME", Link: "/", Icon: HiHome },
+    { Event: "ABOUT", Link: "/#About", Icon: HiDocumentText },
+    { Event: "SCHEDULE", Link: "/#Schedule", Icon: HiCalendar },
+    { Event: "JOIN US", Link: "/sponsor", Icon: HiHeart },
   ];
 
   return (
