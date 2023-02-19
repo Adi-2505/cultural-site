@@ -9,8 +9,8 @@ function Sidebar() {
   };
   const EventLinks = [
     { Event: "HOME", Link: "/", Icon: HiHome },
-    { Event: "ABOUT", Link: "#About", Icon: HiDocumentText },
-    { Event: "SCHEDULE", Link: "#Schedule", Icon: HiCalendar },
+    { Event: "ABOUT", Link: "/#About", Icon: HiDocumentText },
+    { Event: "SCHEDULE", Link: "/#Schedule", Icon: HiCalendar },
     { Event: "JOIN US", Link: "/sponsor", Icon: HiHeart },
   ];
 
