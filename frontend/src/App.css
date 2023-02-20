@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
 * {
     /* background-color: black; */
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 150px;
 
     /* width: 100%; */
 }
@@ -38,23 +38,20 @@ html::-webkit-scrollbar-thumb:active {
     border-radius: 10px;
 }
 
-
 /* fest name and button homepage */
 .navbarbutton:hover {
-    background-color: #F7FF92;
+    background-color: #f7ff92;
     border-radius: 20px;
     color: black;
 }
 
 .navscroll {
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
-
-
 }
 
 .navitems {
-    font-family: 'Outfit';
+    font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -87,8 +84,8 @@ html::-webkit-scrollbar-thumb:active {
     margin: 0 auto;
     align-items: center;
     border-radius: 70px;
-    background-color: #F7FF92;
-    border: 1px solid #F7FF92;
+    background-color: #f7ff92;
+    border: 1px solid #f7ff92;
     padding: 1.05rem 1.4rem;
     color: black;
     font-weight: bold;
@@ -104,6 +101,7 @@ html::-webkit-scrollbar-thumb:active {
 
 
 /*  end fest name and date homepage */
+
 
 /* Sponsor Page start here */
 
@@ -146,24 +144,17 @@ html::-webkit-scrollbar-thumb:active {
 
 /* content css here */
 
-
-
-
 .mainContent {
-    background-image: url('./images/background.jpg');
+    background-image: url("./images/background.jpg");
     /* width: 100%;
     background-size: 100%; */
 }
-
 
 .fcontainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-
-
-
 }
 
 .item1 {
@@ -171,7 +162,7 @@ html::-webkit-scrollbar-thumb:active {
     font-size: 14px;
     font-weight: 800;
     line-height: 30px;
-    font-family: 'ArchitectsDaughterRegular';
+    font-family: "ArchitectsDaughterRegular";
     text-align: left;
     margin-left: 70px;
     margin-top: 50px;
@@ -189,12 +180,11 @@ html::-webkit-scrollbar-thumb:active {
     color: #e0dbdb;
 }
 
-@media only screen and (max-width:1210px) {
+@media only screen and (max-width: 1210px) {
     .rwdimage1 {
         display: inline-block;
     }
 }
-
 
 .innovate {
     width: 400%;
@@ -204,28 +194,24 @@ html::-webkit-scrollbar-thumb:active {
     margin-left: 70px;
 }
 
-
 .item2 {
     /* text-align: center; */
     font-size: 14px;
     font-weight: 800;
     line-height: 30px;
-    font-family: 'ArchitectsDaughterRegular';
+    font-family: "ArchitectsDaughterRegular";
     text-align: right;
     margin-right: 70px;
     margin-top: 60px;
 }
 
-
-
 .sponsor {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
 
     font-size: 50px;
     text-align: center;
     font-weight: 1000;
 }
-
 
 .sponsornote {
     display: flex;
@@ -241,7 +227,6 @@ html::-webkit-scrollbar-thumb:active {
     margin-left: 20%;
     margin-right: 20%;
     padding-top: 20px;
-
 }
 
 .sponsornote2 {
@@ -253,7 +238,6 @@ html::-webkit-scrollbar-thumb:active {
     margin-right: 140px;
     padding-top: 10px;
     padding-bottom: 10px;
-
 }
 
 .lowbutton {
@@ -271,8 +255,7 @@ html::-webkit-scrollbar-thumb:active {
     color: #000000;
 }
 
-
-@media only screen and (max-width:525px) {
+@media only screen and (max-width: 525px) {
     .sponsornote {
         margin-left: 0px;
         margin-right: 0px;
@@ -301,8 +284,12 @@ html::-webkit-scrollbar-thumb:active {
 
     .homepage-button {
         padding: 0.8rem;
-
     }
+
+    /* .newbutton
+    {
+        font-size: 20px;
+    } */
 
   /* Sponsor page */
   .sponsorpage>h1 {
@@ -313,8 +300,8 @@ html::-webkit-scrollbar-thumb:active {
     font-size: 1.4rem;
 }
   /* Sponsor page end */
-}
 
+}
 
 /* sponsor button */
 
@@ -333,7 +320,6 @@ html::-webkit-scrollbar-thumb:active {
     margin-left: 200px;
     margin-right: 200px;
     font-weight: bold;
-
 }
 
 .sponsor-button:hover {
@@ -345,12 +331,12 @@ html::-webkit-scrollbar-thumb:active {
 }
 
 .newbutton {
-    background-color: #F7FF92;
-    border: 1px solid #F7FF92;
-    color: 'black';
-    padding: '10px 10px 10px 10px';
-    text-decoration: 'none';
-    display: 'inline-block';
+    background-color: #f7ff92;
+    border: 1px solid #f7ff92;
+    color: "black";
+    padding: "10px 10px 10px 10px";
+    text-decoration: "none";
+    display: "inline-block";
     border-radius: 70px;
     height: 57px;
     width: 180px;
@@ -362,7 +348,6 @@ html::-webkit-scrollbar-thumb:active {
     cursor: pointer;
     padding: 0 50px;
     font-size: 20px;
-
 }
 
 .newbutton:hover {
@@ -377,25 +362,21 @@ html::-webkit-scrollbar-thumb:active {
     font-size: 21px;
     font-weight: 800;
     line-height: 30px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     text-align: left;
     color: #e0dbdb;
     /* padding-left: 79px;
     padding-right: 20%; */
 }
 
-
 .content2 {
     font-size: 21px;
     font-weight: 800;
     line-height: 30px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     color: #e0dbdb;
     text-align: right;
 }
-
-
-
 
 /* footer css here */
 footer {
@@ -405,7 +386,6 @@ footer {
     width: 100% !important;
     position: absolute !important;
 }
-
 
 .map {
     margin-top: 20px;
@@ -442,7 +422,6 @@ footer {
     margin-left: 14px;
 }
 
-
 .social-icon a {
     width: 52px;
     height: 52px;
@@ -454,7 +433,6 @@ footer {
     justify-content: center;
     line-height: 1;
     border: 1px solid rgba(255, 255, 255, 0.5);
-
 }
 
 .social-icon a::before {
@@ -466,7 +444,6 @@ footer {
     border-radius: 50%;
     transform: scale(0);
     transition: 0.3s ease-in-out;
-
 }
 
 .social-icon a:hover::before {
@@ -482,13 +459,11 @@ footer {
 
 .social-icon a:hover img {
     filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
-
 }
 
 .footer img {
     width: 10vh;
     /* margin-left: 20px; */
-    padding-bottom: 7px;
 
     display: inline-block;
 }
@@ -503,7 +478,7 @@ footer {
     font-size: 14px;
     color: #e0dbdb;
     letter-spacing: 0.5px;
-    margin-top: 20px;
+    margin: 20px;
     text-align: center;
 }
 
@@ -525,24 +500,18 @@ footer {
     /* background-color: rgb(0, 0, 0); */
     padding: 10px;
     flex: 50%;
-
 }
 
 @media (max-width: 800px) {
-
     /* fest name and date homepage */
 
     /*  end fest name and date homepage */
     .flex-container {
         flex-direction: column;
     }
-
-
 }
 
 @media (max-width: 480px) {}
-
-
 
 /* GoTOStop CSS: */
 .App {
@@ -565,7 +534,6 @@ footer {
     transition: opacity 0.4s;
     opacity: 0.9;
     font-family: "monospace", "Lucida Console", "Courier New";
-
 }
 
 /* .scrollTop:hover {
@@ -582,11 +550,7 @@ footer {
     }
 }
 
-
-
-
 /* New CSS */
-
 
 .about-img {
     margin-right: -48px;
@@ -595,7 +559,6 @@ footer {
 .schedule-img {
     margin-left: -49px;
 }
-
 
 .photoSmallKaro {
     margin-top: -80px;
@@ -609,8 +572,7 @@ footer {
     padding-right: 20%; */
 }
 
-
-@media only screen and (max-width:870px) {
+@media only screen and (max-width: 870px) {
 
     /* .topLinks
     {
@@ -654,14 +616,13 @@ footer {
     padding-right: 12%;
 }
 
-@media only screen and (max-width:825px) {
+@media only screen and (max-width: 825px) {
     .photoSmallKaro {
         /* width: 50%; */
         width: 240px;
         height: 100px;
         justify-content: center;
         margin-top: 45px;
-
     }
 
     .content1 {
@@ -678,26 +639,22 @@ footer {
     }
 }
 
-
-
 .newClass2 {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     font-size: 46px;
-
 }
 
 .newClass2_SMALL {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     margin-top: 9px;
     font-size: 18px;
-
 }
 
 .newClass4 {
     text-align: right;
 }
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width: 800px) {
     .content1 {
         /* width: 50%; */
         font-size: 10px;
@@ -714,25 +671,21 @@ footer {
         padding-right: 20px;
         margin-top: 15px;
         justify-content: center;
-
     }
 
     .newClass {
-
         padding-left: 10%;
         padding-right: 10%;
     }
 
     .newClass2 {
         font-size: 20px;
-
     }
 
     .newClass2_SMALL {
-        font-family: 'Ubuntu', sans-serif;
+        font-family: "Ubuntu", sans-serif;
         /* margin-top: 9px; */
         font-size: 10px;
-
     }
 
     .newClass3 {
@@ -750,7 +703,6 @@ footer {
     .sponsor {
         font-size: 35px;
         /* font-family: 'Ubuntu', sans-serif; */
-
     }
 
     .sponsornote {
@@ -775,7 +727,7 @@ footer {
     }
 }
 
-@media only screen and (max-width:533px) {
+@media only screen and (max-width: 533px) {
     .content1 {
         /* width: 50%; */
         font-size: 9px;
@@ -792,7 +744,6 @@ footer {
         padding-right: 20px;
         margin-top: 25px;
         justify-content: center;
-
     }
 
     .img-schedule {
@@ -801,7 +752,6 @@ footer {
 
         margin-top: 50%;
         justify-content: center;
-
     }
 
     .img-schedule2 {
@@ -810,7 +760,6 @@ footer {
 
         margin-top: 30%;
         justify-content: center;
-
     }
 
     .newbutton {
@@ -824,6 +773,10 @@ footer {
     }
 
     .facebookIcon {
+
+        margin-bottom: 15px;
+
         margin-bottom: 15px
+
     }
 }

@@ -7,6 +7,11 @@ function Content() {
   return (
     <>
       <div className="mainContent">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <section id="About">
           <div
             class="p-14 grid grid-rows-3 grid-flow-col gap-4 newClass"
@@ -53,7 +58,12 @@ function Content() {
             </div>
           </div>
         </section>
-
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <section id="Schedule">
           <div
             class="p-14 grid grid-rows-3 grid-flow-col gap-4 newClass3"
@@ -101,7 +111,13 @@ function Content() {
             </div>
           </div>
         </section>
-
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <section id="Sponsor">
           <div>
             <h1 className="sponsor" style={{ color: "white" }}>
@@ -132,6 +148,12 @@ function Content() {
             Join Us
           </a>
         </motion.div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br /> <br />
         <br />
       </div>
     </>

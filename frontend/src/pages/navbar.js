@@ -3,6 +3,8 @@ import logo from "../images/logo.png";
 import Sidebar from "../components/Sidebar";
 import { HiHome, HiCalendar, HiDocumentText, HiHeart } from "react-icons/hi";
 
+import { Link } from "react-router-dom";
+
 function Navbar() {
   const [show, handleshow] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -27,10 +29,12 @@ function Navbar() {
   }
 
   const EventLinks = [
-    { Event: "HOME", Link: "/", icon: HiHome },
-    { Event: "ABOUT", Link: "/#About", icon: HiDocumentText },
-    { Event: "SCHEDULE", Link: "/#Schedule", icon: HiCalendar },
-    // { Event: "SPONSOR US", Link: "/sponsor", icon: HiHeart },
+
+    // { Event: "HOME", Link: "/", icon: HiHome },
+    { Event: "ABOUT", Link: "./#About", icon: HiDocumentText },
+    { Event: "SCHEDULE", Link: "#Schedule", icon: HiCalendar },
+    //{ Event: "SPONSOR US", Link: "/sponsor", icon: HiHeart },
+
   ];
   return (
     <>
@@ -54,15 +58,23 @@ function Navbar() {
         <div className="hidden md:block">
           <div className="flex-column mr-10 text-white font-bold ">
             <ul className="hidden md:flex pr-11 topLinks">
+              <Link to="/">
+                <div className="flex items-center">
+                  <li className="flex-1 p-3  ml-2 mr-2 navitems">Home</li>
+                </div>
+              </Link>
               {EventLinks.map((EventLinks) => (
-                <a href={EventLinks.Link}>
-                  <div className="flex items-center">
-                    <li className="flex-1 p-3  ml-2 mr-2 navitems">
-                      {EventLinks.Event}
-                    </li>
-                  </div>
-                </a>
+                <>
+                  <a href={EventLinks.Link}>
+                    <div className="flex items-center">
+                      <li className="flex-1 p-3  ml-2 mr-2 navitems">
+                        {EventLinks.Event}
+                      </li>
+                    </div>
+                  </a>
+                </>
               ))}
+
                 <div className="flex items-center relative">
                   <button className="flex-1 p-3  ml-2 mr-2 navitems"  onClick={toggleDropdown}>
                     SPONSOR
@@ -75,9 +87,8 @@ function Navbar() {
                   )}
                 </div>
               <button className="p-2 rounded m-1 uppercase navbarbutton navitems transition duration-500">
-                <a href="https://forms.gle/rPWyjMokeTpiAjCZA" target="__blank">
-                  PRE REGISTER
-                </a>
+               <Link to="/register">PRE REGISTER</Link>
+
               </button>
             </ul>
           </div>
